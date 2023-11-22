@@ -1,0 +1,8 @@
+﻿<div class="col-4 col-12-medium">
+    <!-- Контейнер з класами "col-4" і "col-12-medium" -->
+    <cache>
+        <!-- Початок тегу кешування -->
+        @(await Component.InvokeAsync<SidebarViewComponent>())
+        <!-- Виклик компонента SidebarViewComponent() і вставка результату -->
+    </cache>
+</div>

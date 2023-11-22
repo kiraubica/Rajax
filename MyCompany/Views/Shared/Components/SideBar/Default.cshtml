@@ -1,0 +1,47 @@
+﻿@model IQueryable<ServiceItem>
+@*Оголошує тип моделі як IQueryable<ServiceItem>*@
+
+    @if (Model?.Any() == true)
+    {
+        // Перевіряє, чи модель не є нульовою та містить будь-які елементи
+
+        <section>
+            <h2>Наші послуги</h2>
+            @*Відображає заголовок розділу "Наші послуги"*@
+
+            <ul class="small-image-list">
+                @*Створює невпорядкований список за допомогою класу CSS "small-image-list"*@
+
+                @foreach (ServiceItem entity in Model)
+                {
+                    // Перебирає кожен ServiceItem у моделі
+
+                    <li>
+                        @*Початок елемента списку*@
+
+                        <a asp-area="" asp-controller="Services" asp-action="Index" asp-route-id="@entity.Id">
+                            @*Створює посилання за допомогою маршрутизації ASP.NET Core до дії «Індекс» контролера «Служби»
+                            з параметром маршруту "id", встановленим у властивість Id поточного ServiceItem*@
+
+                            <img src="~/images/@entity.TitleImagePath" alt="" class="left" />
+                            @*Відображає зображення з вихідним шляхом на основі властивості TitleImagePath поточного ServiceItem
+                            і застосовує клас CSS "left", щоб вирівняти зображення по лівому краю*@
+
+                        </a>
+
+                        <h4>
+                            @entity.Title
+                        </h4>
+                        @*Відображає властивість Title поточного ServiceItem як рівень заголовка 4 (h4)*@
+
+                        <p>
+                            @entity.Subtitle
+                        </p>
+                        @*Відображає властивість Subtitle поточного ServiceItem як абзац*@
+                    </li>
+                    // Завершує елемент списку
+                }
+            </ul>
+        </section>
+        // Закінчує розділ
+    }

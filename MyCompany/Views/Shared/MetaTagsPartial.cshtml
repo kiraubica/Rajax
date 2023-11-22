@@ -1,0 +1,28 @@
+﻿@using MyCompany.Service; 
+@*Використовуємо простір імен MyCompany.Service*@
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+@if (ViewBag.Title != null) // Перевіряємо, чи властивість ViewBag.Title не є порожньою
+{
+    <title>@ViewBag.Title</title>
+    // Виводимо заголовок сторінки зі значенням ViewBag.Title
+}
+else
+{
+    <title>@Config.CompanyName</title>
+    // Виводимо заголовок сторінки зі значенням Config.CompanyName
+}
+
+@if (ViewBag.Description != null) // Перевіряємо, чи властивість ViewBag.Description не є порожньою
+{
+    <meta name="description" content="@ViewBag.Description" />
+    // Виводимо мета-тег зі значенням ViewBag.Description
+}
+
+@if (ViewBag.Keywords != null) // Перевіряємо, чи властивість ViewBag.Keywords не є порожньою
+{
+    <meta name="keywords" content="@ViewBag.Keywords" />
+    // Виводимо мета-тег зі значенням ViewBag.Keywords
+}
