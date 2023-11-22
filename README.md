@@ -1,4 +1,4 @@
-# 🏢 MyCompany
+# 🏢 Rajax
 MyCompany is a web platform built using ASP.NET MVC that enables users to access and explore various services provided by individuals or companies. The primary goal of this project is to enhance the user experience by simplifying site navigation and facilitating seamless communication with service providers.
 ### Idea and Essence of the Project ⁉️
 The core concept behind the MyCompany project is to establish a platform that enables users to easily identify and access services offered by various individuals or companies. The primary objective of the project is to develop a user-friendly interface that is simple to navigate and utilize.
